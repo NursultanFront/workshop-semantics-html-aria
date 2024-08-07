@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import BodyClassName from "react-body-classname"
 import {Helmet} from "react-helmet"
 import HeaderPortal from "components/header-portal"
@@ -6,6 +6,8 @@ import HeaderPortal from "components/header-portal"
 import "components/styles/page-submit-listing.scss"
 
 const SubmitListingPage = () => {
+    const [isFormSubmitted, setFormSubmit] = useState(false)
+    const [isDirty, setDirt] = useState(false)
     return (
         <BodyClassName className="header-overlap page-submit-listing">
             <>
